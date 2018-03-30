@@ -1,0 +1,83 @@
+<html>
+<head>
+	 <link rel="stylesheet" href="styles.css">
+	 <title>Doctor's Profile - Dr. Salini Unnikrishnan</title>
+	 
+</head>
+<body>
+	<h1>Doctor's Profile</h1>
+	<div id='container'>
+	<img class="dp" src="displaypic.jpg" alt="Dr.Salini">
+	<p>
+	   <div class="title">Dr. Salini Unnikrishnan</div><br>
+	   <div class="desc">
+	   BAMS( Bachelor of Ayurvedic medicine and Surgery)<br>
+	   Ayurveda, Alternative Medicine<br>
+	   Liveright Verified<br>
+	   Ayurvedic Doctor, 5 Year Experience</p>
+		</div>
+</div>
+<br><br>
+<div class="details">
+<div class="title-2"><b><u>Health	Services</u></b></div>
+Acne Treatment, Panchakarma Treatment, Diet	Planning, Skin Care Treatment, Migraine	Treatment
+</div>
+<div class="info">
+
+	<p class="title-3"><b><u>Information</u></b></p>
+	<p class="addr">
+		Location: Velachery<br><br>
+		Ayurillam – Velachery<br>
+		No-105, Karikalan street,<br>
+		Annai Indra Nagar,<br>
+		Velachery,<br>
+		Chennai-600042.
+	</p>
+	<p class="timing">
+		<b><u>Timings</u></b><br><br>
+		Sunday to Friday<br>
+		9.30 AM to 5.30 PM<br><br>
+		Tuesday <br>
+		9:30 AM to 2.00 PM
+	</p>
+
+<div id="Map" style="width:36%;height:27.7%;"></div>
+</div>
+<br>
+<div class="QA">
+<div class="title-2"><u><b>Q&A / Health Feed</b></u></div>
+<br>
+<form action="queries.php" method="POST">
+<b>Phone Number:</b><br><br> <input class="tx" type="text" required name="number"><br><br>
+<b>Question:</b> <br><br><textarea class="txt" name="Question" required rows="10" cols="50"></textarea><br>	
+<br>
+<input class="txts" type="submit" value="Submit">
+</form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+function myMap() {
+  var myCenter = new google.maps.LatLng(12.977620, 80.228254);
+  var mapCanvas = document.getElementById("Map");
+  var mapOptions = {center: myCenter, zoom: 18};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJIA-NQDJ-NC3v3Ykn2WYeg9Sr7Fss1Tk&callback=myMap"></script>
+
+</body>
+</html>
